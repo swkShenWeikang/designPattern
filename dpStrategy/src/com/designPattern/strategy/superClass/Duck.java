@@ -5,14 +5,14 @@ import com.designPattern.strategy.behavior.QuackBehavior;
 
 public abstract class Duck {
 	
-	private FlyBehavior flyBehavior;
 	private QuackBehavior quackBehavior;
+	private FlyBehavior flyBehavior;
 	
-	public void setFlyBehavior(FlyBehavior flyBehavior) {
-		this.flyBehavior = flyBehavior;
-	}
 	public void setQuackBehavior(QuackBehavior quackBehavior) {
 		this.quackBehavior = quackBehavior;
+	}
+	public void setFlyBehavior(FlyBehavior flyBehavior) {
+		this.flyBehavior = flyBehavior;
 	}
 
 	public abstract void display();
