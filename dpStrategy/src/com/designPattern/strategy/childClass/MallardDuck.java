@@ -1,14 +1,19 @@
 package com.designPattern.strategy.childClass;
 
-import com.designPattern.strategy.behaviorImpl.FlyWithWings;
-import com.designPattern.strategy.behaviorImpl.Quack;
+import com.designPattern.strategy.behavior.FlyBehavior;
+import com.designPattern.strategy.behavior.QuackBehavior;
 import com.designPattern.strategy.superClass.Duck;
 
 public class MallardDuck extends Duck {
 	
-	public MallardDuck() {
-		setQuackBehavior(new Quack());
-		setFlyBehavior(new FlyWithWings());
+	/**
+	 * 构造器注入
+	 * @param qb
+	 * @param fb
+	 */
+	public MallardDuck(QuackBehavior qb, FlyBehavior fb) {
+		setQuackBehavior(qb);
+		setFlyBehavior(fb);
 	}
 
 	@Override
